@@ -2,23 +2,9 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
 
 import java.util.Collections.addAll
 
-//talk about namespace pollution - this is another part of making code readable, since if the compiler
-//can tell us what functions are available more easily, we have to read less code!
+//Here we talk about how you can use extension functions to aid in code completion, talk about how you can
+//add extension functions for specific generic implementations, and how this function will only auto complete for that
+//specific implementation! Talk about how you can also apply variance to the extension functions and then
+// code completion will work for those covariant and contravariant types.
 
-//good use case - parsing main argument!
-
-fun main(args: Array<String>) {
-
-    val any = Any()
-    val string = ""
-    val number = 5
-    val numberList = arrayOf<Number>()
-
-    //any isIn numberList
-}
-
-infix fun <K> K.isIn(iterable: Array<K>) = iterable.contains(this)
-
-fun <K> Array<out K?>.applyDefault((K?) -> K)
-    indexOf()
-}
+//use this to demonstrate a fluent api

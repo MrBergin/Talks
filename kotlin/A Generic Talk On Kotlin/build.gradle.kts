@@ -8,6 +8,8 @@ apply {
 }
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib-jdk8"))
+    compile(kotlin("reflect"))
 }
 repositories {
     mavenCentral()
