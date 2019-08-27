@@ -1,13 +1,18 @@
 package mr.bergin.talks.a_generic_talk_on_kotlin.a_intro
 
 /**
- * This talk is intended for people with experience in development already.
+ * The intended audience:
+ * This talk is intended for anyone who's interested in Kotlin's Generics, of course!
+ * That being said, it is assumed the audience is already familiar with programming, exposure to generics
+ * in another language will also help!
  *
- * It is assumed the audience is familiar with generics as a concept, perhaps by using them in another language.
+ * The intended outcome:
+ * The audience should come away with a better understanding of how to use kotlin's generics to produce code which is:
+ * Easy to read (reduced boilerplate and duplication).
+ * Easy to understand (the intent of the piece of code should be clear)
+ * Easy to navigate (write code to enable code-completion to find relevant functions)
+ * Flexible (APIs shouldn't restrict the programmer where possible)
  *
- * The intent is for the developer to come away with a better understanding of how they can write code
- * with less boiler plate, duplication, with a clearer intent and even better auto-completion from their IDE.
- *
- * Many examples shown here will not necessarily be idiomatic kotlin until toward the end of the talk. By this point
- * we will combine generics with other features of kotlin to ascend to the land of idiomatic.
+ * In the interest of not introducing too many concepts too quicklythe  code examples may not represent idiomatic Kotlin
+ * until later on in the talk.
  */
