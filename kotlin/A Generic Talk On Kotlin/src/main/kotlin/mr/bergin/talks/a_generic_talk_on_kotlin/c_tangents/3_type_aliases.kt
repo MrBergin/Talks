@@ -47,5 +47,5 @@ fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) {
  * Another redundancy saver: Any patterns you see creeping up in your code base involving generics can also
  * be solved with type aliases.
  */
-typealias Pair<T> = kotlin.Pair<T, T>
-typealias Triple<T> = kotlin.Triple<T, T, T>
+typealias PairOf<T> = Pair<T, T>
+typealias TripleOf<T> = Triple<T, T, T>
