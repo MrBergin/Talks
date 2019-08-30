@@ -40,12 +40,6 @@ fun typeInference() {
     numbers.filter { it > 0 } //it is inferred to be an Int, since numbers is a List of Int!
 }
 
-fun nullableFun() {
-    val x = ""
-    val y: String? = null
-
-}
-
 /**
  * FUN FACT - generic type inference would be severely undermined without declaration-site variance, if you always had to use
  * use-site variance then you would have to explicitly write the type out in order to add in your "out" or "in"
