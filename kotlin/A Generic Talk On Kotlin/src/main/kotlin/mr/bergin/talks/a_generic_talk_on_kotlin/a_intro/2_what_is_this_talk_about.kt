@@ -4,7 +4,7 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.a_intro
  * The intended audience:
  * This talk is intended for anyone who's interested in Kotlin's Generics, of course!
  * That being said, it is assumed the audience is already familiar with programming, exposure to generics
- * in another language will also help!
+ * in any language will also help!
  *
  * The intended outcome:
  * The audience should come away with a better understanding of how to use kotlin's generics to produce code which is:

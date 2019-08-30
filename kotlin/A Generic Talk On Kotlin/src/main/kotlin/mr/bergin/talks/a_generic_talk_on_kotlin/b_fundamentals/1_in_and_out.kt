@@ -71,3 +71,5 @@ fun <K> toMutableList(source: Array<out K>): MutableList<K> {
 
 val arrayOfStrings = arrayOf<String>()
 val listOfAnother: MutableList<Any> = toMutableList(arrayOfStrings) //this only works because we used "out"!!
+
+//Benefits: API Flexibility.

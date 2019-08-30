@@ -29,3 +29,5 @@ fun listIsGreat() {
     val numberList = listOf<Number>()
     val anythingList: List<Any> = numberList // perfectly fine, because List<Any> is actually a List<out Any>!
 }
+
+//Reduced boilerplate, the types intent is clearer.

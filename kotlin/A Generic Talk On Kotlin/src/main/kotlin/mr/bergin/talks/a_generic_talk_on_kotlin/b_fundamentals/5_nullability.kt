@@ -8,3 +8,5 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
 fun <K> ensureNotNull(k: K?, default: () -> K): K {
     return k ?: default()
 }
+
+//API Flexibility - makes moving between nullable and non-nullable types easier

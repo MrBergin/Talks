@@ -25,15 +25,16 @@ fun typeInference() {
     //in for the sake of the programmer reading it, or if it's not helpful you can take it out as follows:
     val lookingGood = Pair(aString, aListOfString)
 
-    //And just to add a little flavour:
+    //And if you really want to ascend:
     val transcendentalCode = aString to aListOfString
 
 
-    //Type inference will always choose the least specific common ancestor, for example:
-    val numbers = listOf(1, 2, 3) //Int
-    listOf(1, 2, null) //Int?
-    listOf(1, 2, "") //Any
-    listOf(1, 2, "", null) //Any?
+    //Hint: Type inference will always choose the most specific common ancestor, for example:
+    val numbers = listOf(1, 2, 3)
+    listOf(1, 2, 3)
+    listOf(1, 2, null)
+    listOf(1, 2, "")
+    listOf(1, 2, "", null)
 
     //It also makes lambdas quite easy to read!
     numbers.filter { it > 0 } //it is inferred to be an Int, since numbers is a List of Int!

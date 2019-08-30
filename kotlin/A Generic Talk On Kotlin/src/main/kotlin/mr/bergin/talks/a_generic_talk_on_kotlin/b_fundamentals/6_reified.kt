@@ -46,3 +46,5 @@ fun callSiteThatDoesntHurtMyEyes() {
     val strings = mutableListOf<String>()
     storeIfRightType3(strings, Any())
 }
+
+//Readable - boilerplate is reduced - can even be inferred!
