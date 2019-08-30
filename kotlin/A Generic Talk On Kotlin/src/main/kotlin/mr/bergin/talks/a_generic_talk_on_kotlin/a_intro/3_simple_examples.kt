@@ -7,10 +7,11 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.a_intro
 /**
  * Generic functions are defined by adding angled brackets after the keyword "fun" as follows:
  */
+
 fun <K> identity(k: K): K = k
 fun identityExample() {
     val x = ""
-    val y: String = identity<String>(x) //is allowed, since our generic function here is for a String.
+    val y: String = identity<String>(x)
 }
 
 /**

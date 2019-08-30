@@ -47,4 +47,7 @@ fun callSiteThatDoesntHurtMyEyes() {
     storeIfRightType3(strings, Any())
 }
 
-//Readable - boilerplate is reduced - can even be inferred!
+/**
+ * Readable - boilerplate is reduced - in fact the class<> previously passed can even be inferred now.
+ * Intent - hints to the reader this function solves a problem doing type checking or casting.
+ */

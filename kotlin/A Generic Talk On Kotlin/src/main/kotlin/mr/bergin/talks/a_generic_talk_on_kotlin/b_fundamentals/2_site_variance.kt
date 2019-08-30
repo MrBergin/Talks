@@ -30,4 +30,8 @@ fun listIsGreat() {
     val anythingList: List<Any> = numberList // perfectly fine, because List<Any> is actually a List<out Any>!
 }
 
+/**
+ * Easy to read - given there are no members using the generic in the "in" position, we would be repeating
+ * ourselves everywhere
+ */
 //Reduced boilerplate, the types intent is clearer.
