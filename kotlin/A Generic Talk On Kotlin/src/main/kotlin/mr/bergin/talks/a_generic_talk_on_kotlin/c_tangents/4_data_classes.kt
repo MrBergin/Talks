@@ -10,3 +10,7 @@ fun dataClasses() {
     val nameToAge = "Jordan Bergin" to 29
     val (name, age) = nameToAge //name
 }
+
+/**
+ * Readability - so much boilerplate is done for us!
+ */

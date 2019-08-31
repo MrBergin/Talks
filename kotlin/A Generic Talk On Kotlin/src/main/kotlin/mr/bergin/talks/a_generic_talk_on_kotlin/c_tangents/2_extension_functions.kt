@@ -41,3 +41,10 @@ fun extensionFunctions() {
  * with a StringList instead of List<String>. The best part being we never had to introduce a new type just for the
  * sake of better auto-complete!
  */
+
+/**
+ * So the main thing we gain here is navigating our code.
+ *
+ * With this feature you will never again lose where that function that manipulates a List<String> (was it in
+ * StringUtils, ListUtils, Collections? I just can't find it!)
+ */

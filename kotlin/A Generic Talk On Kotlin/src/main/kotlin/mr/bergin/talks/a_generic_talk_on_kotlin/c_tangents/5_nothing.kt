@@ -38,3 +38,9 @@ fun nothingIsInteresting() {
     val listOfNumbers: List<Number> = emptyList()
     val listOfAny: List<Any> = emptyList()
 }
+
+/**
+ * Clear intent - Nothing in a generic is communicating to others nothing exists inside here.
+ * Flexibility - As the emptyList() example above demonstrates, we have a typesafe way to instance control
+ * across a generic type.
+ */

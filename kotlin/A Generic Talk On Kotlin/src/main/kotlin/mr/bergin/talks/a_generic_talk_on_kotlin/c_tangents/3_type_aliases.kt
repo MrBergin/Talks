@@ -64,3 +64,10 @@ typealias TripleOf<T> = Triple<T, T, T>
 typealias Callable<K> = java.util.concurrent.Callable<out K> //Callable only ever produces K, so this is fine!
 var callableNumber = Callable<Number> { 5 }
 var callableAny: Callable<Any> = callableNumber //If we used java.util.concurrent.Callable, this wouldn't work!
+
+/**
+ * typealiases give us a lot with generics:
+ *
+ * Flexibility: we can apply kotlin features like declaration site variance to java types.
+ * Readability: we can condense verbose generic type definitions for easier to read apis.
+ */
