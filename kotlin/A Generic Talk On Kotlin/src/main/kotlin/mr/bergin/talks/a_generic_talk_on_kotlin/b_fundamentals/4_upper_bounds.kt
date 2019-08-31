@@ -40,4 +40,3 @@ fun <K> runEnsuringClosed(k: K) where K: Runnable, K: Closeable {
  *
  * Easy to navigate - we'll see in the extension functions section later on how this works :)
  */
-//Clearer intent, enhanced API flexibility (especially when used with extension functions - see later).

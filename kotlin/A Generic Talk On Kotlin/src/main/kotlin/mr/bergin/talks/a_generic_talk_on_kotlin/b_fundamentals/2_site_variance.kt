@@ -8,14 +8,14 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
 val useSite : MutableList<out Number> = mutableListOf<Int>()
 
 /**
- * Kotlin also offers something called "declaration-site" variance. We set the variance on the generic class itself.
+ * Kotlin also offers something called "declaration-site" variance. We set the variance on the generic class/interface itself.
  *
  * This is a handy way of communicating that the type itself doesn't provide a way to "take out" or "put in" the
- * generic type parameter. This allows the compiler now infer "in" or "out" wherever the type is used!
+ * generic type. This allows the compiler now infer "in" or "out" wherever the type is used!
  *
  * (more on inference later!).
  */
-interface DeclarationSite<in K> {
+interface DeclarationSite<out K> {
     fun consume(k: K)
 
     fun produce(): K
@@ -31,7 +31,7 @@ fun listIsGreat() {
 }
 
 /**
- * Easy to read - given there are no members using the generic in the "in" position, we would be repeating
- * ourselves everywhere
+ * So what does it give us?
+ *
+ * Easy to read - it means we don't have to duplicate the variance everywhere if we know the type will always have it.
  */
-//Reduced boilerplate, the types intent is clearer.

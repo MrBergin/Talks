@@ -45,7 +45,3 @@ fun typeInference() {
  * use-site variance then you would have to explicitly write the type out in order to add in your "out" or "in"
  * just like in the "maxVerbosity" val above.
  */
-
-/**
- *
- */

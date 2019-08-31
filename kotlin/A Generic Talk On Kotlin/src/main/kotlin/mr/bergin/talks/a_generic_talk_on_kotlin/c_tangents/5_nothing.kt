@@ -2,21 +2,18 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
 
 import java.lang.RuntimeException
 
-//Talk about how nothing allows us to use one type to represent all empty lists in a typesafe way.
-//You could just cast, and it would all work fine, or you could communicate with the compiler that you
-//have a list of Nothing, and it is then happy to use covariance to assign anything to an empty list.
-
 /**
  * Nothing is peculiar feature, it allows us to communicate with the compiler an absence of something, e.g.
  * a function that will never finish (because it always throws an exception).
  */
-
 fun returnsNothing(): Nothing {
     throw RuntimeException("Nothing to see here!")
 }
 
 /**
  * It may seem odd, but nothing can be assigned to any type. This is because any type is capable of not existing!
+ *
+ * Think of Nothing as the opposite of Any? - everything is a child of Any? and a parent of Nothing.
  */
 fun nothingIsEverything() {
     val x: String = returnsNothing()
@@ -24,16 +21,20 @@ fun nothingIsEverything() {
 }
 
 /**
- * Now, combine this with "out" variance, let's use a List for example, and you get something quite interesting...
+ * Let's see how this behaves with "out" variance, for example a List (which has declaration-site variance out).
  */
 fun nothingIsInteresting() {
+
+    //all of these work because Nothing is a subtype of everything.
     val listOfNothing = listOf<Nothing>()
     val listOfInts: List<Int> = listOfNothing
     val listOfStrings: List<String> = listOfNothing
     val listOfNullableAnything: List<Any?> = listOfNothing
 
-    //all of the above are fine, because list has "out" variance and Nothing is a subtype of any type!
-    //this means we have a type-safe way of producing a single instance of something, that works for any type!
-    //in fact, this is *almost* what kotlin does!
+    //since that one list of nothing can be assigned to any type of list, this means we have a way
+    //of representing all types of lists with only one instance, in fact this is exactly how the
+    //kotlin standard library achieves a single type safe empty list that can be used for any type of empty list!
+
     val listOfNumbers: List<Number> = emptyList()
+    val listOfAny: List<Any> = emptyList()
 }

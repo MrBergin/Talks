@@ -1,5 +1,4 @@
 package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
-import kotlin.text.isEmpty
 
 /**
  * As you may know kotlin uses nullable types for null safety.

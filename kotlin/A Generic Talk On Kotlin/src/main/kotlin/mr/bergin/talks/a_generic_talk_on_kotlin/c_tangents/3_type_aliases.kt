@@ -1,7 +1,9 @@
 package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
 
-//Now, Kotlin's type inference can only take us so far. There are, of course, places where you have to define your
-//verbose generics such as function parameters. So you may end up with something that looks like this:
+/**
+ * Now, Kotlin's type inference can only take us so far. There are, of course, places where you have to define your
+ * verbose generics such as function parameters. So you may end up with something that looks like this:
+ */
 
 fun verbosey(wordSoup: Pair<String, List<String>>) {
 
@@ -10,34 +12,37 @@ fun verbosey(wordSoup: Pair<String, List<String>>) {
 /**
  * Now this isn't the end of the world, but it's still a lot of information for one parameter, you may end up with...
  */
-
 fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>>, wordSoup: Pair<String, List<String>>) {
 
 }
 
 /**
- * Getting a little harder to read, right? Now of course a good approach would be to look into introducing new types
- * to represent this groupedWordSoup and wordSoup, in fact with groupedWordSoup you're in luck since it's an interface
- * and kotlin can use delegation for that, the type is still exactly the same
+ * Getting a little harder to read, right? One approach would be to create a data class called WordSoup, and this
+ * indeed is a good solution. On the other hand if you're already passing wordSoup around everywhere in your code
+ * as a pair and it meets your needs this way, an readability win with no effort would be to use:
  */
-class GroupedWordSoupUgly(groupedWordSoup: Map<String, Pair<String, List<String>>>): Map<String, Pair<String,List<String>>> by groupedWordSoup
+typealias WordSoup = Pair<String, List<String>>
+
+
 
 /**
- * But there's two problems, one is the above is still making our eyes bleed, and we can't apply the same logic to
- * our wordSoup parameter because it's not an interface. You could introduce an entirely new type for it, but then
- * you would not be able to use it as a pair elsewhere (which may already be doing) without converting it back and forth.
+ * We can then do the same with groupedWordSoup
+ */
+typealias GroupedWordSoup = Map<String, WordSoup>
+
+/**
+ * With the above we can use generics with less of a wordy appearance!
  */
 
-typealias WordSoup = Pair<String, List<String>>
+/**
+ * NB for anyone interested: delegating an interface is also a fantastic approach to solving GroupedWordSoup too
+ * But I'm assuming we'll have to skip this approach due to time constraints!
+ */
+//class GroupedWordSoup(init: Map<String, WordSoup>): Map<String, WordSoup> by init
+
 
 /**
  * Now we are ready for readable code!!!
- */
-
-class GroupedWordSoup(init: Map<String, WordSoup>): Map<String, WordSoup> by init
-
-/**
- * Now it's easy to read and both parameters are the same type as they were before.
  */
 fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) {
 
@@ -49,3 +54,13 @@ fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) {
  */
 typealias PairOf<T> = Pair<T, T>
 typealias TripleOf<T> = Triple<T, T, T>
+
+/**
+ * But wait, there's more! Remember declaration-site variance? Well there's quite a few types in Java which only
+ * produce or only consume, wouldn't it be nice if they could benefit from this lovely kotlin feature?
+ *
+ * With typealiases they can!
+ */
+typealias Callable<K> = java.util.concurrent.Callable<out K> //Callable only ever produces K, so this is fine!
+var callableNumber = Callable<Number> { 5 }
+var callableAny: Callable<Any> = callableNumber //If we used java.util.concurrent.Callable, this wouldn't work!

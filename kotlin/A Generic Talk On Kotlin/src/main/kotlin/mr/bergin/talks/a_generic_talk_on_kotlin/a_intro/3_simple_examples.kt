@@ -9,8 +9,9 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.a_intro
  */
 
 fun <K> identity(k: K): K = k
+
 fun identityExample() {
-    val x = ""
+    val x: String = ""
     val y: String = identity<String>(x)
 }
 
@@ -19,6 +20,7 @@ fun identityExample() {
  */
 interface GenericInterface<K>
 class GenericClass<K>
+
 fun interfaceAndClassExample(x: GenericInterface<Any>, y: GenericClass<String>) {
 }
 
