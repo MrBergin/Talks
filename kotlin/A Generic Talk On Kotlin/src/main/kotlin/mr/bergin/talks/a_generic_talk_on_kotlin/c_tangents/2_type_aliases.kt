@@ -24,7 +24,6 @@ fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>
 typealias WordSoup = Pair<String, List<String>>
 
 
-
 /**
  * We can then do the same with groupedWordSoup
  */
@@ -33,13 +32,6 @@ typealias GroupedWordSoup = Map<String, WordSoup>
 /**
  * With the above we can use generics with less of a wordy appearance!
  */
-
-/**
- * NB for anyone interested: delegating an interface is also a fantastic approach to solving GroupedWordSoup too
- * But I'm assuming we'll have to skip this approach due to time constraints!
- */
-//class GroupedWordSoup(init: Map<String, WordSoup>): Map<String, WordSoup> by init
-
 
 /**
  * Now we are ready for readable code!!!
@@ -70,4 +62,13 @@ var callableAny: Callable<Any> = callableNumber //If we used java.util.concurren
  *
  * Flexibility: we can apply kotlin features like declaration site variance to java types.
  * Readability: we can condense verbose generic type definitions for easier to read apis.
+ * Intent: we can assign meaning to otherwise abstract types.
  */
+
+
+
+/**
+ * NB for anyone interested: delegating an interface is also a fantastic approach to solving GroupedWordSoup too
+ * But I'm assuming we'll have to skip this approach due to time constraints!
+ */
+//class GroupedWordSoup(init: Map<String, WordSoup>): Map<String, WordSoup> by init
