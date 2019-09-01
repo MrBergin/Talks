@@ -19,5 +19,7 @@ fun sizeOf(list: MutableList<*>) = list.size
  * <*> is simply shorter to read.
  *
  * Clearer intent - Given the above, it leaves no ambiguity for the reader of your function, it is entirely reasonable
- * that <out Any> could be ready as <out Any?> or vice versa, <*> does not have this problem.
+ * that <out Any> could be ready as <out Any?> or vice versa, <*> does not have this problem. Also if your generic
+ * already had an upper bound e.g. <T: CharSequence> then <*> would automatically mean <out CharSequence> so it
+ * saves you having to make sure you used the correct upper bound.
  */
