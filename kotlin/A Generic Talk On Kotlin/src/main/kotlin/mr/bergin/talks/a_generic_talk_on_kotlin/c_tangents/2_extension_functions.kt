@@ -33,7 +33,6 @@ fun extensionFunctions() {
     //Just like the .sum() one we'll only see this function show up in our auto-complete when we have a list of
     //things that can be compared - a great way to communicate to other developers what wonderful functions
     //you've prepared for them to use.
-
 }
 
 /**

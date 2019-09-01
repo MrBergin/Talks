@@ -12,9 +12,9 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.a_intro
  * The audience should come away with a better understanding of how to use kotlin's generics to produce code which is:
  *
  * A) Easy to read (reduced boilerplate and duplication).
- * B) Clear intent (what the code does is clear, minimal WTFs per minute)
- * C) Easy to navigate (where possible code-completion should be able to help us)
- * D) Flexible (code shouldn't restrict us unless there is a worthwhile trade-off for it)
+ * B) Clear intent (what the code does is clear, minimal WTFs per minute).
+ * C) Easy to navigate (where possible code-completion should be able to help us).
+ * D) Flexible (code shouldn't restrict us unless there is a worthwhile trade-off for it).
  *
  * Where applicable the sections of this talk will reflect on how it relates to the above points.
  */

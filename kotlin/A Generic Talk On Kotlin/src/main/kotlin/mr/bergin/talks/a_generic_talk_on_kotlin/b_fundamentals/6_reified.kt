@@ -48,6 +48,6 @@ fun callSiteThatDoesntHurtMyEyes() {
 }
 
 /**
- * Readable - boilerplate is reduced - in fact the class<> previously passed can even be inferred now.
+ * Readable - boilerplate is reduced - in fact the String::class previously passed can even be inferred now.
  * Intent - hints to the reader this function solves a problem doing type checking or casting.
  */

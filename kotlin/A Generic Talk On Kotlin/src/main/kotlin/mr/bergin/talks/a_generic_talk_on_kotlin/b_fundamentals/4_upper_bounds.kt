@@ -36,7 +36,7 @@ fun <K> runEnsuringClosed(k: K) where K: Runnable, K: Closeable {
  * Clearer intent - the generic itself is helping to document what this function is for (K: Comparable<K> shows me
  * the intent for this function is perform comparisons in some way).
  *
- * Flexibility - we restrict the caller from using irrelevant types * in exchange for being able to do more within the function.
+ * Flexibility - we restrict the caller from using irrelevant types in exchange for being able to do more within the function.
  *
  * Easy to navigate - we'll see in the extension functions section later on how this works :)
  */
