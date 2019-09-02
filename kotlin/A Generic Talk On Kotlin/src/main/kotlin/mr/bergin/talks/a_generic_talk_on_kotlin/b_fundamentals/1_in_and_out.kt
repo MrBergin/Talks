@@ -10,7 +10,7 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
  */
 
 /**
- * Simplest example: neither in nor out.
+ * Neither in nor out.
  * In english, this means we have a list of numbers.
  */
 fun neitherInNorOut() {
@@ -21,13 +21,13 @@ fun neitherInNorOut() {
     listOfNumbers.add(42)
     val result: Number = listOfNumbers.first()
 
-    //but we have no flexibility of assigning it :(
+    //but we have no flexibility of assigning it - known as "invariant".
     listOfNumbers = mutableListOf<Any>()
     listOfNumbers = mutableListOf<Int>()
 }
 
 /**
- * In variance.
+ * In.
  * In english this means we have a list and all we know about it is it can have numbers put in it.
  */
 fun `in`() {
@@ -37,13 +37,13 @@ fun `in`() {
     canPutNumbersIn.add(42)
     val result: Any? = canPutNumbersIn.first() //can't take out a number, has to be Any?
 
-    //but now we can be flexible on what we can assign:
+    //but now we can be flexible with the generic type and use a supertype - this is known as contravariance.
     canPutNumbersIn = mutableListOf<Any>() //a list of anything can have numbers go in, so this is fine!
     canPutNumbersIn = mutableListOf<Int>() //there are number types that wouldn't go in here, such as Double :(
 }
 
 /**
- * Out variance.
+ * Out.
  * In english this means we have a list, all we know about it is we can take numbers out.
  */
 fun `out`() {
@@ -53,7 +53,7 @@ fun `out`() {
     canTakeNumbersOut.add(42)
     val result: Number = canTakeNumbersOut.first()
 
-    //but now we can be flexible on what we can assign:
+    //but now we can be flexible with the generic type and use a subtype - this is known as covariance.
     canTakeNumbersOut = mutableListOf<Any>() // A list of Any could have Strings in it.
     canTakeNumbersOut = mutableListOf<Int>() // A List of Ints, can of course produce you a number.
 }
