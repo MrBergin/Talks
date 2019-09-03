@@ -4,12 +4,6 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
  * As you may know kotlin uses nullable types for null safety.
  * By using "?" we can allow our generics to accept nullable types, even when the generic itself isn't nullable.
  */
-
-/**
- * You can painlessly toggle whether or not the parameter is nullable, for example this function allows
- * nullable K even if the generic type is non-nullable.
- */
-
 fun <K> noNullsPlease(nullables: List<K?>): List<K> {
     val mutableList = mutableListOf<K>()
     nullables.forEach {
