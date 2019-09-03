@@ -27,17 +27,6 @@ fun typeInference() {
 
     //And if you really want to transcend:
     val transcendentalCode = aString to aListOfString
-
-
-    //Hint: Type inference will always choose the most specific common ancestor, for example:
-    val numbers = listOf(1, 2, 3)
-    listOf(1, 2, 3)
-    listOf(1, 2, null)
-    listOf(1, 2, "")
-    listOf(1, 2, "", null)
-
-    //It also makes lambdas quite easy to read!
-    numbers.filter { it > 0 } //it is inferred to be an Int, since numbers is a List of Int!
 }
 
 
@@ -50,5 +39,6 @@ fun typeInference() {
 /**
  * So what are we getting here?
  *
- * Readability, readability and more readability!
+ * Readability, readability and more readability! Although you can take it too far - always read it back to yourself
+ * and put in explicit types if it becomes hard to reason about your program.
  */
