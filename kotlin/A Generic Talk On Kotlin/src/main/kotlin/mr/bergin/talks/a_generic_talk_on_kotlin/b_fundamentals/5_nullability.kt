@@ -13,8 +13,8 @@ fun <K> noNullsPlease(nullables: List<K?>): List<K> {
 }
 
 fun usage() {
-    val nullableStrings: List<String?> = listOf("Hello", null)
-    val strings: List<String> = noNullsPlease(nullableStrings)
+    val nullableStrings: List<String?> = listOf<String?>("Hello", null)
+    val strings: List<String> = noNullsPlease<String>(nullableStrings)
 }
 
 
