@@ -14,7 +14,6 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
  * In english, this means we have a list of numbers.
  */
 fun neitherInNorOut() {
-
     var listOfNumbers: MutableList<Number> = mutableListOf<Number>()
 
     //we have no restrictions on how we can use this type :)
