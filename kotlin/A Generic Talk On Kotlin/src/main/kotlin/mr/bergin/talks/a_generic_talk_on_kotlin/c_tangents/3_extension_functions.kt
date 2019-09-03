@@ -8,7 +8,6 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
  * The Kotlin Stdlib is full of amazing examples, so instead of coming up with my own we'll walk through the
  * api they have for manipulating collections.
  */
-
 fun extensionFunctions() {
 
     //Here's one of my favourites: part of making your code readable is also making it easy to find.
@@ -19,7 +18,6 @@ fun extensionFunctions() {
     //with integers, and even if it did auto-complete would show us the instance function regardless
     //of the generic type...
     //This would have to be defined outside the class, finding it would be a pain normally but...
-
     numbers.sum()
 
     //You won't find the sum() method on a List<String> - this is great because it wouldn't make sense, and
@@ -34,12 +32,6 @@ fun extensionFunctions() {
     //things that can be compared - a great way to communicate to other developers what wonderful functions
     //you've prepared for them to use.
 }
-
-/**
- * With extension functions we can really give meaning to specific generic types, almost as if we were working
- * with a StringList instead of List<String>. The best part being we never had to introduce a new type just for the
- * sake of better auto-complete!
- */
 
 /**
  * So the main thing we gain here is navigating our code.
