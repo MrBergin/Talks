@@ -8,7 +8,7 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
  */
 fun dataClasses() {
     val nameToAge = "Jordan Bergin" to 29
-    val (name, age) = nameToAge //name
+    val (name, age) = nameToAge
 }
 
 /**
