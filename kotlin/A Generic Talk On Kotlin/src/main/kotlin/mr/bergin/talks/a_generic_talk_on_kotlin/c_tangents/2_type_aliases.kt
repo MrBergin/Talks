@@ -4,17 +4,12 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
  * Now, Kotlin's type inference can only take us so far. There are, of course, places where you have to define your
  * verbose generics such as function parameters. So you may end up with something that looks like this:
  */
-
-fun verbosey(wordSoup: Pair<String, List<String>>) {
-
-}
+fun verbosey(wordSoup: Pair<String, List<String>>) { }
 
 /**
  * Now this isn't the end of the world, but it's still a lot of information for one parameter, you may end up with...
  */
-fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>>, wordSoup: Pair<String, List<String>>) {
-
-}
+fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>>, wordSoup: Pair<String, List<String>>) { }
 
 /**
  * Getting a little harder to read, right? One approach would be to create a data class called WordSoup, and this
@@ -22,7 +17,6 @@ fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>
  * is already using it this way in a few places then here's a quick win:
  */
 typealias WordSoup = Pair<String, List<String>>
-
 
 /**
  * We can then do the same with groupedWordSoup
@@ -32,17 +26,11 @@ typealias GroupedWordSoup = Map<String, WordSoup>
 /**
  * With the above we can use generics with less of a wordy appearance!
  */
-
-/**
- * Now we are ready for readable code!!!
- */
-fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) {
-
-}
+fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) { }
 
 /**
  * Another redundancy saver: Any patterns you see creeping up in your code base involving generics can also
- * be solved with type aliases.
+ * be solved with type aliases - for example you may find yourself
  */
 typealias PairOf<T> = Pair<T, T>
 typealias TripleOf<T> = Triple<T, T, T>
