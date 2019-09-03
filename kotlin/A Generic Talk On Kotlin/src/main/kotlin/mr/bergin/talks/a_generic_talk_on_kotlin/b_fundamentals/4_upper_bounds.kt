@@ -26,8 +26,9 @@ fun <T : Appendable> T.append(vararg value: CharSequence?): T {
  * If you want to specify many upper bounds, you use the "where" syntax.
  */
 fun <K> runEnsuringClosed(k: K) where K: Runnable, K: Closeable {
-    k.run()
-    k.close()
+    k.use {
+        it.run()
+    }
 }
 
 /**
