@@ -23,9 +23,3 @@ class GenericClass<K>
 
 fun interfaceAndClassExample(x: GenericInterface<Any>, y: GenericClass<String>) {
 }
-
-/**
- * This also applies to other features you may see in kotlin:
- */
-data class GenericDataClass<K>(private val k: K)
-sealed class SealedClass<K>
