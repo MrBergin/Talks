@@ -18,8 +18,8 @@ fun whyOhWhyDidIWriteThis(groupedWordSoup: Map<String, Pair<String,List<String>>
 
 /**
  * Getting a little harder to read, right? One approach would be to create a data class called WordSoup, and this
- * indeed is a good solution. On the other hand if you're already passing wordSoup around everywhere in your code
- * as a pair and it meets your needs this way, an readability win with no effort would be to use:
+ * indeed is a good solution. On the other hand if a pair meets your criteria for wordSoup, and your code base
+ * is already using it this way in a few places then here's a quick win:
  */
 typealias WordSoup = Pair<String, List<String>>
 
