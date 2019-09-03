@@ -12,7 +12,6 @@ val useSite : MutableList<out Number> = mutableListOf<Int>()
  *
  * This is a handy way of communicating that the type itself doesn't provide a way to "take out" or "put in" the
  * generic type. This allows the compiler now infer "in" or "out" wherever the type is used (more on inference later).
- *
  */
 interface DeclarationSite<out K> {
     fun consume(k: K)
