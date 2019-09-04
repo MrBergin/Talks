@@ -19,7 +19,7 @@ fun usage() {
 
 
 /**
- * This one ticks all the boxes really!
+ * Let's review it!
  *
  * Flexibility - you can invoke a function for a non-nullable generic type, but you can still pass in a nullable one.
  * Readability - you can abstract away null check duplication by passing a K? and returning a K (like above).
