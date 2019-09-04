@@ -4,7 +4,6 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.c_tangents
  * Now let's look at an example that uses generics.
  *
  * Type parameters code can start to look verbose, but Kotlin has a very aggressive approach to type inference.
- * This type inference
  */
 fun typeInference() {
 
