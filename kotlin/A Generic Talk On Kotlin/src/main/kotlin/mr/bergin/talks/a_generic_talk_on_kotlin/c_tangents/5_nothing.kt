@@ -11,7 +11,7 @@ fun returnsNothing(): Nothing {
 }
 
 /**
- * It may seem odd, but nothing can be assigned to any type. This is because any type is capable of not existing!
+ * It may seem odd, any type can be assigned to nothing. This is because any type is capable of not existing!
  *
  * Think of Nothing as the opposite of Any? - everything is a child of Any? and a parent of Nothing.
  */
@@ -31,7 +31,7 @@ fun nothingIsInteresting() {
     val listOfStrings: List<String> = listOfNothing
     val listOfNullableAnything: List<Any?> = listOfNothing
 
-    //since that one list of nothing can be assigned to any type of list, this means we have a way
+    //since all these lists can be assigned to the single nothing list, this means we have a way
     //of representing all types of lists with only one instance, in fact this is exactly how the
     //kotlin standard library achieves a single type safe empty list that can be used for any type of empty list!
 
