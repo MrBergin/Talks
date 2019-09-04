@@ -30,7 +30,7 @@ fun myEyesAreGrateful(groupedWordSoup: GroupedWordSoup, wordSoup: WordSoup) { }
 
 /**
  * Another redundancy saver: Any patterns you see creeping up in your code base involving generics can also
- * be solved with type aliases - for example you may find yourself
+ * be solved with type aliases.
  */
 typealias PairOf<T> = Pair<T, T>
 typealias TripleOf<T> = Triple<T, T, T>
