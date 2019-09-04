@@ -17,7 +17,7 @@ fun <L> storeIfRightType1(destination: MutableList<L>, toCheck: Any?) {
 /**
  * Of course you could use reflection...
  */
-fun <L> storeIfRightType2(destination: MutableList<L>, toCheck: Any?, clazz: KClass<L>) {
+fun <L: Any> storeIfRightType2(destination: MutableList<L>, toCheck: Any?, clazz: KClass<L>) {
     if (clazz.isInstance(toCheck)) destination.add(toCheck as L)
 }
 
