@@ -9,7 +9,6 @@ import kotlin.reflect.KClass
  *
  * What this means is you can't do this:
  */
-
 fun <L> storeIfRightType1(destination: MutableList<L>, toCheck: Any?) {
     if (toCheck is L) destination.add(toCheck)
 }
@@ -33,7 +32,6 @@ fun uglyCallSite() {
  * But let's be honest, passing clazz feels bad, that warning about an unchecked cast is a little annoying too!
  * The call site as well... Let's move on quick!
  */
-
 inline fun <reified L> storeIfRightType3(destination: MutableList<L>, toCheck: Any?) {
     if (toCheck is L) destination.add(toCheck)
 }
