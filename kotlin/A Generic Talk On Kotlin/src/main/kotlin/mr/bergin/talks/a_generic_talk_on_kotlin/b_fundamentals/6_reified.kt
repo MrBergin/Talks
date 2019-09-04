@@ -3,10 +3,9 @@ package mr.bergin.talks.a_generic_talk_on_kotlin.b_fundamentals
 import kotlin.reflect.KClass
 
 /**
- * The final fundamental is reified. As you may well know, these generics are implemented using erasure.
+ * The final fundamental is reified.
  *
- * This means whilst you may know at compile time what your generic times are, no new types are actually created
- * for the runtime and all this information is lost.
+ * Kotlin's generics are also subject to type-erasure means our program doesn't know about these types are runtime.
  *
  * What this means is you can't do this:
  */
